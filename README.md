@@ -87,3 +87,5 @@ GitHub URL:  https://github.com/jenstem
 ##
 <a id='notes'></a>
 ## Notes:
+
+I received help from [Tutswiki](https://tutswiki.com/read-write-json-config-file-in-python/).

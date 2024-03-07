@@ -1,23 +1,29 @@
 import os
 import json
+from datetime import datetime
 
 # Load the parameters from the config file
 def open_config_file():
     with open('config.json', 'r') as jsonfile:
         data = json.load(jsonfile)
-        return data.get('parameters')
+        return data.get('parameters', {})
 
 # Arrange files in the desktop based on the parameters
-# def arrange_files(parameters):
+def arrange_files(parameters):
+    #define the path to the desktop
+    desktop = os.path.expanduser('C:/Users/username/Desktop')
+    # define the path to the log file
+    logfile = 'python-desktop-cleaner.log'
+
+    # Create a log or append new entries to the existing log file
+    with open(logfile, 'a') as file:
+        # Log the start time
+        file.write(f'Start time: {datetime.now()}\n')
 
 
 
 
 #     for file in os.listdir('C:/Users/username/Desktop'):
-
-
-
-# Create a log or append new entries to the existing log file
 
 
 # Loop through the parameters

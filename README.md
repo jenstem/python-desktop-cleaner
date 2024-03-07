@@ -88,4 +88,5 @@ GitHub URL:  https://github.com/jenstem
 <a id='notes'></a>
 ## Notes:
 
-I received help from [Tutswiki](https://tutswiki.com/read-write-json-config-file-in-python/).
+I received help from [Tutswiki](https://tutswiki.com/read-write-json-config-file-in-python/),
+[Python.org](https://docs.python.org/3/library/shutil.html)

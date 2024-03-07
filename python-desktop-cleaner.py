@@ -1,5 +1,6 @@
 import os
 import json
+import shutil
 from datetime import datetime
 
 # Load the parameters from the config file
@@ -40,11 +41,8 @@ def arrange_files(parameters):
             file_path = os.path.join(desktop, desktop_file)
             new_folder = os.path.join(folder, desktop_file)
 
-
-
-
 # Move the files to the appropriate folder based on the parameters
-
+            shutil.move(file_path, new_folder)
 
 
 # Log the files that were moved

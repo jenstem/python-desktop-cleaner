@@ -28,9 +28,18 @@ def arrange_files(parameters):
         type = parameter.get('type')
         folder = parameter.get('folder')
 
+        # Create the folder if it does not exist
+        if not os.path.exists(folder):
+            os.makedirs(folder)
 
 
 # Loop through the files in the desktop
+    for desktop_file in os.listdir(desktop):
+        # Get the file extension
+        if desktop_file.endswith(f'.{type}'):
+            file_path = os.path.join(desktop, desktop_file)
+            new_folder = os.path.join(folder, desktop_file)
+
 
 
 

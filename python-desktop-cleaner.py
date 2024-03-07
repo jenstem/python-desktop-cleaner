@@ -12,7 +12,7 @@ def open_config_file():
 # Arrange files in the desktop based on the parameters
 def arrange_files(parameters):
     desktop = os.path.expanduser('~/Desktop')
-    logfile = os.path.join(desktop, 'python-desktop-cleaner.log')
+    logfile = os.path.join('python-desktop-cleaner.log')
 
     # Create a log or append new entries to the existing log file
     with open(logfile, 'a') as file:

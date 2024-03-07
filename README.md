@@ -89,4 +89,5 @@ GitHub URL:  https://github.com/jenstem
 ## Notes:
 
 I received help from [Tutswiki](https://tutswiki.com/read-write-json-config-file-in-python/),
-[Python.org](https://docs.python.org/3/library/shutil.html)
+[Python.org](https://docs.python.org/3/library/shutil.html),
+[CareerKarma](https://careerkarma.com/blog/python-valueerror-io-operation-on-closed-file/)

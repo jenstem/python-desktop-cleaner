@@ -3,6 +3,22 @@
         {
             "type": "pages",
             "folder": "Documents"
+        },
+        {
+            "type": "numbers",
+            "folder": "Spreadsheets"
+        },
+        {
+            "type": "pdf",
+            "folder": "PDFs"
+        },
+        {
+            "type": "jpg",
+            "folder": "Images"
+        },
+        {
+            "type": "png",
+            "folder": "Images"
         }
     ]
 }

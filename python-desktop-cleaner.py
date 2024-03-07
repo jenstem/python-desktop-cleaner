@@ -46,11 +46,15 @@ def arrange_files(parameters):
 
 
 # Log the files that were moved
-
+        file.write(f'End time: {datetime.now()}\n')
 
 
 # Add main function
-
+def main():
+    parameters = open_config_file()
+    arrange_files(parameters)
 
 
 # Call the main function
+if __name__ == '__main__':
+    main()

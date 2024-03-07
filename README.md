@@ -78,7 +78,7 @@ You can edit the config file to add/remove file types/folders you need to have c
 <a id='screenshots'></a>
 ## Screenshots/Gifs:
 
-<img src="https://github.com/jenstem/space_invasion/blob/main/space-invasion-ezgif.com-video-to-gif-converter.gif" width=1000>
+<img src="https://github.com/jenstem/python-desktop-cleaner/blob/main/python-desktop-cleaner-ezgif.com-video-to-gif-converter.gif" width=1000>
 
 <a id='contact'></a>
 ## Contact Me
@@ -88,6 +88,7 @@ GitHub URL:  https://github.com/jenstem
 <a id='notes'></a>
 ## Notes:
 
-I received help from [Tutswiki](https://tutswiki.com/read-write-json-config-file-in-python/),
+I received help/code from [Tutswiki](https://tutswiki.com/read-write-json-config-file-in-python/),
+[Joeltabe](https://github.com/Joeltabe/Automatic-Desktop-Cleaner/tree/main),
 [Python.org](https://docs.python.org/3/library/shutil.html),
 [CareerKarma](https://careerkarma.com/blog/python-valueerror-io-operation-on-closed-file/)

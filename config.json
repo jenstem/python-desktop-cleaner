@@ -1,0 +1,8 @@
+{
+    "parameters": [
+        {
+            "type": "pages",
+            "folder": "Documents"
+        }
+    ]
+}

@@ -11,50 +11,34 @@ def open_config_file():
 
 # Arrange files in the desktop based on the parameters
 def arrange_files(parameters):
-    #define the path to the desktop
     desktop = os.path.expanduser('~/Desktop')
-    # define the path to the log file
     logfile = 'python-desktop-cleaner.log'
 
     # Create a log or append new entries to the existing log file
     with open(logfile, 'a') as file:
-        # Log the start time
         file.write(f'Start time: {datetime.now()}\n')
-
-#     for file in os.listdir('C:/Users/username/Desktop'):
-
 
 # Loop through the parameters
     for parameter in parameters:
         type = parameter.get('type')
         folder = parameter.get('folder')
-
-        # Create the folder if it does not exist
-        if not os.path.exists(folder):
-            os.makedirs(folder)
-
+        folder_path = os.path.join(desktop, folder)
+        os.makedirs(folder_path, exist_ok=True)
 
 # Loop through the files in the desktop
     for desktop_file in os.listdir(desktop):
-        # Get the file extension
         if desktop_file.endswith(f'.{type}'):
             file_path = os.path.join(desktop, desktop_file)
-            new_folder = os.path.join(folder, desktop_file)
+            new_folder = os.path.join(folder_path, desktop_file)
 
-# Move the files to the appropriate folder based on the parameters
             shutil.move(file_path, new_folder)
 
+    with open(logfile, 'a') as file:
+            file.write(f'End time: {datetime.now()}\n')
 
-# Log the files that were moved
-        file.write(f'End time: {datetime.now()}\n')
-
-
-# Add main function
 def main():
     parameters = open_config_file()
     arrange_files(parameters)
 
-
-# Call the main function
 if __name__ == '__main__':
     main()

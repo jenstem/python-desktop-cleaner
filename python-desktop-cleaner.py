@@ -12,7 +12,7 @@ def open_config_file():
 # Arrange files in the desktop based on the parameters
 def arrange_files(parameters):
     #define the path to the desktop
-    desktop = os.path.expanduser('C:/Users/username/Desktop')
+    desktop = os.path.expanduser('~/Desktop')
     # define the path to the log file
     logfile = 'python-desktop-cleaner.log'
 

@@ -20,13 +20,13 @@ def arrange_files(parameters):
         # Log the start time
         file.write(f'Start time: {datetime.now()}\n')
 
-
-
-
 #     for file in os.listdir('C:/Users/username/Desktop'):
 
 
 # Loop through the parameters
+    for parameter in parameters:
+        type = parameter.get('type')
+        folder = parameter.get('folder')
 
 
 

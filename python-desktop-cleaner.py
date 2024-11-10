@@ -3,29 +3,41 @@ import json
 import shutil
 from datetime import datetime
 
-# Load the parameters from the config file
+
 def open_config_file():
+    """
+    Opens the configuration file and retrieves the parameters for file organization.
+
+    Returns:
+        list: A list of parameters extracted from the configuration file.
+    """
     with open('config.json', 'r') as jsonfile:
         data = json.load(jsonfile)
         return data.get('parameters', [])
 
-# Arrange files in the desktop based on the parameters
+
 def arrange_files(parameters):
+    """
+    Arranges files on the desktop based on the provided parameters.
+
+    Args:
+        parameters (list): A list of dictionaries containing file types and corresponding folder names.
+    """
     desktop = os.path.expanduser('~/Desktop')
     logfile = os.path.join('python-desktop-cleaner.log')
 
-    # Create a log or append new entries to the existing log file
+
     with open(logfile, 'a') as file:
         file.write(f'Start time: {datetime.now()}\n')
 
-    # Loop through the parameters
+
     for parameter in parameters:
         type = parameter.get('type', '')
         folder = parameter.get('folder', '')
         folder_path = os.path.join(desktop, folder)
         os.makedirs(folder_path, exist_ok=True)
 
-        # Loop through the files in the desktop
+
         for desktop_file in os.listdir(desktop):
             if desktop_file.endswith(f'.{type}'):
                 file_path = os.path.join(desktop, desktop_file)
@@ -37,6 +49,10 @@ def arrange_files(parameters):
         file.write(f'End time: {datetime.now()}\n')
 
 def main():
+    """
+    Main function to execute the file arrangement process.
+    It retrieves parameters from the configuration file and organizes the desktop files accordingly.
+    """
     parameters = open_config_file()
     arrange_files(parameters)
 
